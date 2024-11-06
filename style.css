@@ -11,6 +11,29 @@
     font-style: normal;
 }
 
+:root {
+    --rect: #d0edff;
+    --path1: #6abeff;
+    --path2: #2d9afa;
+    --path3: #0073ef;
+    --path4: #0048dc;
+    --path5: #0004c0;
+
+    --mainBar1: #4eb5ffc6;
+    --mainBar2: #1c2975c6;
+}
+.night-theme {
+    --rect: #253f5b;
+    --path1: #13365b;
+    --path2: #123152;
+    --path3: #0f2b49;
+    --path4: #0b213c;
+    --path5: #08152d;
+
+    --mainBar1: #2f6f9dc6;
+    --mainBar2: #101844c6;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +63,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(-135deg, #4eb5ffc6, #1c2975c6);
+    background: linear-gradient(-135deg, var(--mainBar1), var(--mainBar2));
     border-radius: 20px;
     padding: 100px;
     width: 500px;
@@ -134,19 +157,19 @@ a {
 }
 
 .txtWhite1{
-    left: 87px;
+    left: 80px;
 }
 .txtWhite2{
     left: 75px;
 } 
 .txtWhite3 {
-    left: 80px;
+    left: 83px;
 } 
 .txtWhite4 {
     left: 82px;
 } 
 .txtWhite5 {
-    left: 69px;
+    left: 80px;
 } 
 .txtWhite6 {
     left: 75px;
@@ -287,6 +310,9 @@ a {
     object-fit: cover;
     z-index: -1;
 }
+.visual * {
+    transition: 3s ease;
+}
 .sun {
     position: absolute;
     top: 10%;
@@ -353,4 +379,23 @@ a {
 }
 .language-switch:hover .language-dropdown {
     display: block;
+}
+
+.rect-fill {
+    fill: var(--rect);
+}
+.path1-fill {
+    fill: var(--path1);
+}
+.path2-fill {
+    fill: var(--path2);
+}
+.path3-fill {
+    fill: var(--path3);
+}
+.path4-fill {
+    fill: var(--path4);
+}
+.path5-fill {
+    fill: var(--path5);
 }
