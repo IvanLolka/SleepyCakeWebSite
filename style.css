@@ -308,7 +308,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
 }
 .visual * {
     transition: 3s ease;
@@ -398,4 +398,28 @@ a {
 }
 .path5-fill {
     fill: var(--path5);
+}
+
+
+@keyframes waveSegment1 {
+    0%, 100% { transform: skewX(0deg) scale(1); }
+    30% { transform: skewX(4deg) scale(1.02); }
+    70% {transform: skewX(-4deg) scale(1.01);}
+}
+  
+.tail {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    right: 68%;
+    overflow: visible;
+    z-index: -1;
+    rotate: 9deg;
+}
+.tail-part-1 {
+    animation: waveSegment1 25s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+.cls-1 {
+    fill:url(#grad1);
 }
