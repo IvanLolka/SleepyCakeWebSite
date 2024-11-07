@@ -276,23 +276,23 @@ a {
 }
 
 
-.visual path:nth-child(1) {
+.visual .path1-fill {
     animation: waveAnimation 20s ease-in-out infinite alternate;
     animation-delay: 0s;
 }
-.visual path:nth-child(2) {
+.visual .path2-fill {
     animation: waveAnimation 24s ease-in-out infinite alternate;
     animation-delay: 1s;
 }
-.visual path:nth-child(3) {
+.visual .path3-fill {
     animation: waveAnimation 20.5s ease-in-out infinite alternate;
     animation-delay: 0.5s;
 }
-.visual path:nth-child(4) {
+.visual .path4-fill {
     animation: waveAnimation 20.5s ease-in-out infinite alternate;
     animation-delay: 1.5s;
 }
-.visual path:nth-child(5) {
+.visual .path5-fill {
     animation: waveAnimation 20.8s ease-in-out infinite alternate;
     animation-delay: 0.8s;
 }
@@ -323,26 +323,6 @@ a {
 }
 .visual * {
     transition: 3s ease;
-}
-.sun {
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    fill: #FFD700;
-    filter: blur(1px);
-}
-
-
-@keyframes sunGlow {
-    0% {
-        box-shadow: 0 0 100px rgba(255, 221, 0, 0.74);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(255, 221, 0, 0.74);
-    }
-    100% {
-        box-shadow: 0 0 100px rgba(255, 221, 0, 0.74);
-    }
 }
 
 .language-button {
@@ -413,26 +393,27 @@ a {
 
 
 @keyframes waveSegment1 {
-    0%, 100% { transform: skewX(0deg) scale(1); }
-    30% { transform: skewX(4deg) scale(1.02); }
-    70% {transform: skewX(-4deg) scale(1.01);}
+    0%, 100% { transform: skewX(0deg) scale(1) translateY(5px); }
+    30% { transform: skewX(4deg) scale(1.02) translateY(23px); }
+    50% { transform: translateY(35px); }
+    70% { transform: skewX(-4deg) scale(1.01) translateY(23px); }
 }
   
 .tail {
-    position: absolute;
-    width: 500px;
-    bottom: -35px;
-    right: 68%;
+    transform: translateY(1000px);
     overflow: visible;
     z-index: -1;
     rotate: 9deg;
-}
-.tail-part-1 {
     animation: waveSegment1 25s ease-in-out infinite;
+    animation-delay: 0.8s;
     transform-origin: bottom center;
 }
+
 .cls-1 {
     fill:url(#grad1);
+}
+.cls-2 {
+    fill: #989898;
 }
 
 
