@@ -243,7 +243,7 @@ a {
         justify-content: center;
         animation: none;
         transition: none;
-        max-width: 100px;
+        width: 80px;
     }
     .selection:hover .txtWhite1,
     .selection:hover .txtWhite2,
@@ -254,13 +254,24 @@ a {
         opacity: 0;
         transition: none;
     }
-    .selection:hover {
-        width: 100px;
-        justify-content: center;
-        transition: none;
-    }
     .iconStyle {
         transition: none;
+    }
+    .selectionBar {
+        grid-template-columns: repeat(3, min-content);
+    }
+    .selectionBar2 {
+        grid-template-columns: repeat(3, min-content);
+    }
+    .iconStyle {
+        width: 40px;
+    }
+    .selection {
+        width: 80px;
+        height: 80px;
+    }
+    .txtTitle {
+        margin-bottom: 25px;
     }
 }
 
@@ -287,15 +298,15 @@ a {
 }
 
 @keyframes waveAnimation {
-0% {
-    transform: translateY(0) scale(1, 1);
-}
-50% {
-    transform: translateY(5px) scale(1.05, 1.05);
-}
-100% {
-    transform: translateY(0) scale(1, 1);
-}
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+    50% {
+        transform: translateY(5px) scale(1.05, 1.05);
+    }
+    100% {
+        transform: translateY(0) scale(1, 1);
+    }
 }
 
 .container {
@@ -323,15 +334,15 @@ a {
 
 
 @keyframes sunGlow {
-0% {
-    box-shadow: 0 0 100px rgba(255, 221, 0, 0.74);
-}
-50% {
-    box-shadow: 0 0 25px rgba(255, 221, 0, 0.74);
-}
-100% {
-    box-shadow: 0 0 100px rgba(255, 221, 0, 0.74);
-}
+    0% {
+        box-shadow: 0 0 100px rgba(255, 221, 0, 0.74);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 221, 0, 0.74);
+    }
+    100% {
+        box-shadow: 0 0 100px rgba(255, 221, 0, 0.74);
+    }
 }
 
 .language-button {
@@ -410,7 +421,7 @@ a {
 .tail {
     position: absolute;
     width: 500px;
-    top: 50%;
+    bottom: -35px;
     right: 68%;
     overflow: visible;
     z-index: -1;
@@ -422,4 +433,14 @@ a {
 }
 .cls-1 {
     fill:url(#grad1);
+}
+
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    color: #888;
+    z-index: 10;
 }
