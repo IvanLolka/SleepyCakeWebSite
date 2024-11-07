@@ -108,7 +108,7 @@ a {
 }
 .txtTitle {
     font-family: 'pop';
-    margin-top: 2   0px;
+    margin-top: 20px;
     margin-bottom: 10px;
     font-size: 40px;
 }
@@ -484,6 +484,9 @@ footer {
         position: relative;
         opacity: 1;
         z-index: 10;
+    }
+    .txtTitle {
+        margin-bottom: 5px;
     }
 }
 
