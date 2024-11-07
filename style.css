@@ -67,7 +67,7 @@ a {
     z-index: 2;
     background-size: cover;
 }
-.mainBar {
+.mainBar, .mainBar2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,6 +80,11 @@ a {
     backdrop-filter: blur(3px);
     /*box-shadow: 0 0 20px 5px rgba(0, 64, 255, 0.147),
                 0 0 40px 10px rgba(0, 145, 255, 0.403);*/
+}
+.mainBar2 {
+    position: absolute;
+    opacity: 0;
+    z-index: -10;
 }
 .background-svg {
     position: absolute;
@@ -103,7 +108,7 @@ a {
 }
 .txtTitle {
     font-family: 'pop';
-    margin-top: 20px;
+    margin-top: 2   0px;
     margin-bottom: 10px;
     font-size: 40px;
 }
@@ -146,6 +151,23 @@ a {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, min-content);
+    gap: 30px;
+}
+.selectionBar3 {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 30px;
+}
+.selectionBar4 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 30px;
+}
+.selectionBar5 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
     gap: 30px;
 }
 .selection {
@@ -411,7 +433,7 @@ footer {
 
 
 @media (600px > width) {
-    .mainBar {
+    .mainBar2 {
         height: 100vh;
     }
     .selection:hover {
@@ -449,9 +471,19 @@ footer {
         margin-bottom: 25px;
     }
     .hrsl, .hrsl2 {
-        width: 210px;
+        width: 280px;
         height: 0.5px;
 
+    }
+    .mainBar {
+        position: absolute;
+        opacity: 0;
+        z-index: -10;
+    }
+    .mainBar2 {
+        position: relative;
+        opacity: 1;
+        z-index: 10;
     }
 }
 
