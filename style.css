@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'bst';
-    src: url('fonts/ofont.ru_Zapf-ChanceC.woff') format('woff');
+    font-family: 'pop';
+    src: url('fonts/Poppins-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +12,7 @@
 }
 
 :root {
-    --rect: #d0edff;
+    --rect: #3b8ce4;
     --path1: #6abeff;
     --path2: #2d9afa;
     --path3: #0073ef;
@@ -21,6 +21,10 @@
 
     --mainBar1: #4eb5ffc6;
     --mainBar2: #1c2975c6;
+
+    --tailgr1: #414c6a;
+    --tailgr2: #00063c;
+    --tailc: #cecece;
 }
 .night-theme {
     --rect: #253f5b;
@@ -32,11 +36,16 @@
 
     --mainBar1: #2f6f9dc6;
     --mainBar2: #101844c6;
+
+    --tailgr1: #282d3b;
+    --tailgr2: #000214;
+    --tailc: #989898;
 }
 
 * {
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 body, html {
     height: 100%;
@@ -63,16 +72,27 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(-135deg, var(--mainBar1), var(--mainBar2));
+    overflow: hidden;
     border-radius: 20px;
     padding: 100px;
     width: 500px;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
-    /*box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.147),
-                0 0 40px 10px rgba(255, 0, 0, 0.403);*/
+    /*box-shadow: 0 0 20px 5px rgba(0, 64, 255, 0.147),
+                0 0 40px 10px rgba(0, 145, 255, 0.403);*/
 }
-.txtWhite1, .txtWhite2, .txtWhite3, .txtWhite4, .txtWhite5, .txtWhite6 {
+.background-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Отправляем SVG на задний план */
+}
+.bargr {
+    transition: 3s ease;
+}
+.txtWhite1, .txtWhite2, .txtWhite3, .txtWhite4, .txtWhite5, .txtWhite6, .txtWhite7, .txtWhite8 {
     color: white;
     font-size: 20px;
     font-family: 'roboto';
@@ -81,18 +101,29 @@ a {
     transition: 0s ease;
     position: absolute;
 }
+.txtTitle {
+    font-family: 'pop';
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
 .txt {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-family: 'roboto';
 }
-.txtTitle, .txt {
-    color: white;    
+.hrsl, .hrsl2 {
+    width: 470px;
+    height: 1px;
+    color: white;
+    background-color: white;
+    margin-bottom: 5px;
 }
-.txtTitle {
-    font-family: 'bst';
-    margin-bottom: 50px;
-    font-size: 45px;
+.hrsl2 {
+    margin-bottom: 20px;
+}
+.txtTitle, .txt, .txt2 {
+    color: white;    
 }
 .iconStyle {
     width: 50px;
@@ -108,13 +139,13 @@ a {
 }
 .selectionBar {
     display: grid;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(4, min-content);
     gap: 30px;
 }
 .selectionBar2 {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(4, min-content);
     gap: 30px;
 }
 .selection {
@@ -155,6 +186,12 @@ a {
 .selection:hover .txtWhite6 {
     opacity: 1;
 }
+.selection:hover .txtWhite7 {
+    opacity: 1;
+}
+.selection:hover .txtWhite8 {
+    opacity: 1;
+}
 
 .txtWhite1{
     left: 80px;
@@ -173,6 +210,12 @@ a {
 } 
 .txtWhite6 {
     left: 75px;
+}
+.txtWhite7 {
+    left: 92px;
+}
+.txtWhite8 {
+    left: 92px;
 }
 
 .selection:hover {
@@ -209,45 +252,6 @@ a {
     }
 }
 
-@media (600px > width) {
-    .mainBar {
-        height: 100vh;
-    }
-    .selection:hover {
-        justify-content: center;
-        animation: none;
-        transition: none;
-        width: 80px;
-    }
-    .selection:hover .txtWhite1,
-    .selection:hover .txtWhite2,
-    .selection:hover .txtWhite3,
-    .selection:hover .txtWhite4,
-    .selection:hover .txtWhite5,
-    .selection:hover .txtWhite6 {
-        opacity: 0;
-        transition: none;
-    }
-    .iconStyle {
-        transition: none;
-    }
-    .selectionBar {
-        grid-template-columns: repeat(3, min-content);
-    }
-    .selectionBar2 {
-        grid-template-columns: repeat(3, min-content);
-    }
-    .iconStyle {
-        width: 40px;
-    }
-    .selection {
-        width: 80px;
-        height: 80px;
-    }
-    .txtTitle {
-        margin-bottom: 25px;
-    }
-}
 
 
 .visual .path1-fill {
@@ -385,10 +389,16 @@ a {
     fill:url(#grad1);
 }
 .cls-2 {
-    fill: #989898;
+    fill: var(--tailc);
 }
-
-
+.tailgr1 {
+    stop-color:var(--tailgr1);
+    stop-opacity:1;
+}
+.tailgr2 {
+    stop-color:var(--tailgr2);
+    stop-opacity:1;
+}
 footer {
     position: fixed;
     bottom: 10px;
@@ -396,4 +406,64 @@ footer {
     font-size: 0.9em;
     color: #888;
     z-index: 10;
+}
+
+
+
+@media (600px > width) {
+    .mainBar {
+        height: 100vh;
+    }
+    .selection:hover {
+        justify-content: center;
+        animation: none;
+        transition: none;
+        width: 80px;
+    }
+    .selection:hover .txtWhite1,
+    .selection:hover .txtWhite2,
+    .selection:hover .txtWhite3,
+    .selection:hover .txtWhite4,
+    .selection:hover .txtWhite5,
+    .selection:hover .txtWhite6 {
+        opacity: 0;
+        transition: none;
+    }
+    .iconStyle {
+        transition: none;
+    }
+    .selectionBar {
+        grid-template-columns: repeat(2, min-content);
+    }
+    .selectionBar2 {
+        grid-template-columns: repeat(2, min-content);
+    }
+    .iconStyle {
+        width: 40px;
+    }
+    .selection {
+        width: 80px;
+        height: 80px;
+    }
+    .txtTitle {
+        margin-bottom: 25px;
+    }
+    .hrsl, .hrsl2 {
+        width: 210px;
+        height: 0.5px;
+
+    }
+}
+
+@media (700px > width) {
+    .visual  {
+        width: 1920px;
+        height: 1080px;
+    }
+}
+
+@media (800px > width) {
+    .tail {
+        opacity: 0;
+    }
 }
