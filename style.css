@@ -385,7 +385,7 @@ footer {
     color: #888;
     z-index: 10;
 }
-@media (1920px > width) {
+@media (1526px > width) {
     .visual {
         width: 1536px;
         height: 960px;
