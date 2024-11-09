@@ -1,3 +1,3 @@
-Сайт с сылками создан для [SleepyCake](https://www.twitch.tv/sleepycake_)
+The site with links was created for [SleepyCake](https://www.twitch.tv/sleepycake_)
 
-[Сам сайт](https://sleepycake.ru)
+[site](https://sleepycake.ru)
