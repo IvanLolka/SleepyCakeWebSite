@@ -80,6 +80,9 @@ a {
     /*box-shadow: 0 0 20px 5px rgba(0, 64, 255, 0.147),
                 0 0 40px 10px rgba(0, 145, 255, 0.403);*/
 }
+.mainBar {
+    transform: scale(0.9);
+}
 .mainBar2 {
     position: absolute;
     opacity: 0;
@@ -391,7 +394,7 @@ footer {
         height: 960px;
     }
     .mainBar {
-        transform: scale(0.9);
+        transform: scale(0.7);
     }
 }
 @media (1920px < width) {
@@ -400,7 +403,7 @@ footer {
         height: 1800px;
     }
     .mainBar {
-        transform: scale(1.5);
+        transform: scale(1.1);
     }
     footer {
         font-size: 2em;
@@ -412,7 +415,7 @@ footer {
         height: 2700px;
     }
     .mainBar {
-        transform: scale(2);
+        transform: scale(1.6);
     }
     footer {
         font-size: 3em;
