@@ -405,7 +405,7 @@ footer {
         transform: scale(1.1);
     }
     footer {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 @media (2880px < width) {
@@ -417,7 +417,7 @@ footer {
         transform: scale(1.6);
     }
     footer {
-        font-size: 3em;
+        font-size: 2.3em;
     }
 }
 
