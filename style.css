@@ -132,7 +132,7 @@ a {
 .txtTitle, .txt, .txt2 {
     color: white;    
 }
-.iconStyle {
+.iconStyle, .iconStyle2 {
     width: 50px;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
@@ -316,11 +316,10 @@ a {
 }
 .visual {
     position: absolute;
-    width: 1920px;
+    width: 1980px;
     height: 1200px;
     object-fit: cover;
     z-index: -2;
-    aspect-ratio: 9/16;
 }
 .visual * {
     transition: 3s ease;
@@ -388,7 +387,7 @@ footer {
     color: #888;
     z-index: 10;
 }
-@media (1526px > width) {
+@media (1596px > width) {
     .visual {
         width: 1536px;
         height: 960px;
@@ -397,10 +396,10 @@ footer {
         transform: scale(0.7);
     }
 }
-@media (1920px < width) {
+@media (1920px < width) { 
     .visual {
-        width: 2880px;
-        height: 1800px;
+        width: 2574px;
+        height: 1560px;
     }
     .mainBar {
         transform: scale(1.1);
@@ -411,8 +410,8 @@ footer {
 }
 @media (2880px < width) {
     .visual {
-        width: 4320px;
-        height: 2700px;
+        width: 3861px;
+        height: 2340px;
     }
     .mainBar {
         transform: scale(1.6);
@@ -497,3 +496,11 @@ footer {
         opacity: 0;
     }
 }
+
+.st011{fill:#ffffff;}
+.iconStyle2 {
+    scale: 2;
+}
+
+.fil0 {fill:#FEFEFE}
+.fnt0 {font-weight:normal;font-size:4793px;font-family:'roboto';}
